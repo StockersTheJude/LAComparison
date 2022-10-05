@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  How to use this tool – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        How to use this tool
+      </h1>
+
+      <p class="govuk-body">You can view and compare the performance of local authorities in four areas of service delivery:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Children and vulnerable people</li>
+        <li>Health, social care and integration</li>
+        <li>Housing, planning and transport</li>
+        <li>Safer, cleaner, stronger communities</li>
+      </ul>
+
+      <p>The tool will only show data for the services provided by the local authority you selected.</p>
+      <p>For example, selecting a district council will not produce results for transport. This is because the
+        county council in that area manages transport. So you would need to select the county council.</p>
+
+        <h1 class="govuk-heading-m">
+          To view performance data for one local authority
+        </h1>
+
+        <ol class="govuk-list govuk-list--number">
+          <li>Choose a local authority in the first drop down menu </li>
+          <li>Click Apply Filters</li>
+        </ol>
+
+        <h1 class="govuk-heading-m">
+          To compare your chosen local authority with up to three other local authorities
+        </h1>
+
+        <ol class="govuk-list govuk-list--number">
+          <li>Choose a local authority in the first drop down menu </li>
+          <li>Choose up to three more local authorities in the next drop down menus</li>
+          <li>Click Apply Filters</li>
+        </ol>
+        
+      <p>Your selected local authorities will show on the graph as coloured dots.  The grey dots on the graph represent
+        other local authorities in England.</p>
+
+      <p>This means that you can see how the ones you selected compare to them.</p>
+
+      <p>The median line shows the average performance.  Either side of the median line is positive or negative (performance)
+        or high or low (expenditure).</p>
+
+      <p>Underneath the graphs is a table of data sources for the selected local authorities. You can use this to view more
+        detailed information.</p>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Detailed explanation of the methodology
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>To plot local authority data we use the median absolute deviation (MAD). We preferred the median to the
+              mean because outliers can skew the mean value in each dataset. An example would be temporary accommodation
+              where there are some significant negative outliers.</p>
+
+              <p>On the graph, you can see how local authorities compare to the median local authority value. Their distance
+                from the median line shows the comparison.</p>
+
+              <p>To find this, we take the difference between the value of the chosen authority and the median local authority,
+                and divide it by MAD.</p>
+
+              <p>A local authority's score is 'positive' or 'negative when it is more than one MAD above or below the median
+                (MADs are shown along the bottom of the graph). These scores are in a summary table for the first selected authority.</p>
+
+              <p>Local authorities more than two MADS above or below the median imply exceptional performance. This will often
+                be due to unique local area characteristics such as low populations.</p>
+
+              <p>Public consensus is used to find positive and negative directions. For example, fewer roads in need of repair
+                is a positive. In this example, negative performance means a higher percentage of roads needing repair.</p>
+
+                <p>Any authority that scores 7.5 MADs above or below the median will be grouped at the end of the scale.
+                  You should consider this when viewing these local authorities and their actual values.</p>
+          </div>
+        </details>
+
+    </div>
+  </div>
+
+{% endblock %}

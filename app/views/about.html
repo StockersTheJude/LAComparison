@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  About this tool – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        About this tool
+      </h1>
+
+      <p>This interactive tool enables you to see and compare local authority metrics for the services they provide. </p>
+
+      <p>The first version of the tool displays 16 local authority outcome metrics, based on 2020/2021 financial year upper
+        (county council) and lower tier (district council) local authority structures. </p>
+
+      <h3 class="govuk-heading-m">Limitations of the data set</h3>
+
+          <p class="govuk-body">The tool does not include metrics on:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>police</li>
+            <li>fire</li>
+            <li>waste</li>
+            <li>national parks</li>
+            <li>combined authorities</li>
+            <li>2020-2021 merged authorities of North and West Northamptonshire are excluded</li>
+          </ul>
+
+        <p>This tool will only display data for your chosen service if you have selected the correct tier of local authority
+          under which that service sits. You will need to know which tier of local authority within your chosen area/county
+          provides the service you want to view data on. <a href="https://geoportal.statistics.gov.uk/datasets/ons::lower-tier-local-authority-to-upper-tier-local-authority-december-2020-lookup-in-england-and-wales/explore" class="govuk-link">You can check this information here</a> (Source: Office for National Statistics).</p>
+
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Types of local authority
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">Shire districts have responsibility for:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>housing</li>
+                <li>leisure and recreation</li>
+                <li>environmental health</li>
+                <li>waste collection</li>
+                <li>planning applications</li>
+                <li>local taxation collection</li>
+              </ul>
+
+              <p class="govuk-body">Shire counties have responsibility for:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>education</li>
+                <li>highways</li>
+                <li>transport planning</li>
+                <li>planning applications</li>
+                <li>local taxation collection</li>
+              </ul>
+
+              <p class="govuk-body">Unitaries have responsibility for both shire district and shire county level services.  
+                This means they are responsible for:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>education</li>
+                <li>housing</li>
+                <li>leisure and recreation</li>
+                <li>libraries</li>
+                <li>highways</li>
+                <li>transport planning</li>
+                <li>environmental health</li>
+                <li>social care</li>
+                <li>waste collection and disposal</li>
+                <li>strategic planning</li>
+                <li>planning applications</li>
+                <li>local taxation collection</li>
+              </ul>
+
+              <p>The Greater London Authority (GLA) runs Transport for London.  This means that London Boroughs are not
+                responsible for highways or transport planning.</p>
+
+                <p class="govuk-body">In London, Greater Manchester (excluding Wigan and Merseyside), joint waste management
+                  authorities are responsible for waste collection. In Manchester, it is the Greater Manchester Combined Authority.
+                  In London, there are four joint waste authorities. These are:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>West Londonn</li>
+                  <li>North London</li>
+                  <li>Western Riverside</li>
+                  <li>East London</li>
+                </ul>
+            </div>
+          </details>
+
+        <p>Data for Buckinghamshire may be missing where the data has not been reported yet for the new unitary authority.</p>
+
+        <p>The Common Council of the City of London and the Council of the Isles of Scilly are often called 'sui generis' or
+          unique authorities.  This means that they function like unitary authorities, even though they cater for very small
+          populations.  Because of their uniqueness, they are not included in the local authority comparisons.</p>
+
+        <p>For details of the latest Ofsted rankings of schools, please refer to the
+          <a href="https://www.compare-school-performance.service.gov.uk/">Compare School Performance Service</a>.  This data is
+          updated and maintained separately by the Department for Education.</p>
+
+        <p>We will update this interactive tool on a quarterly basis.  If new data becomes available between updates,
+          it will not be shown until the next update.</p>
+
+        <h4 class="govuk-heading-s">Your feedback will help us shape the tool’s content and functionality in future</h4>
+
+        <p>If you have any questions or feedback, please <a href="contactus">contact us</a></p>
+
+        <p><a href="howto">Find out how to use this tool.</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
